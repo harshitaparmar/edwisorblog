@@ -40,11 +40,11 @@ myApp.controller('editBlogController',['$http','BlogService','$routeParams','$lo
           heading     : main.blog.heading,
           subHeading  : main.blog.subHeading,
           bodyHtml    : main.blog.bodyHtml,
-          author      : main.blog.author;
+          author      : main.blog.author
 
       }
       console.log(blogData);
-      BlogService.editABlog(this.blogId,this.blogData)
+      BlogService.editABlog(this.blogId,blogData)
       .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
